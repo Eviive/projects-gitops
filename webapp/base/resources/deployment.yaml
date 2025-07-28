@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: projects-webapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: projects-webapp
+  template:
+    metadata:
+      labels:
+        app: projects-webapp
+    spec:
+      containers:
+        - name: projects-webapp
+          image: eviive/repository:projets-webapp-2.0.0
+          ports:
+            - name: http
+              containerPort: 80

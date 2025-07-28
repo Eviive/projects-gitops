@@ -1,0 +1,24 @@
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: projects
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - kind: Rule
+      services:
+        - name: projects-webapp
+          port: http
+      middlewares:
+        - name: traefik-error-pages
+          namespace: traefik
+    - kind: Rule
+      services:
+        - name: projects-bff
+          port: http
+      middlewares:
+        - name: traefik-error-pages
+          namespace: traefik
+  tls:
+    secretName: projects-tls

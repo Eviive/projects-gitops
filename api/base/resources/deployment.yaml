@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: projects-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: projects-api
+  template:
+    metadata:
+      labels:
+        app: projects-api
+    spec:
+      containers:
+        - name: projects-api
+          image: eviive/repository:projets-api-2.0.0
+          volumeMounts:
+            - name: logs
+              mountPath: /workspace/logs
+          ports:
+            - name: http
+              containerPort: 8080
+      volumes:
+        - name: logs
+          persistentVolumeClaim:
+            claimName: projects-api-logs

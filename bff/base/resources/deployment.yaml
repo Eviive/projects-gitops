@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: projects-bff
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: projects-bff
+  template:
+    metadata:
+      labels:
+        app: projects-bff
+    spec:
+      containers:
+        - name: projects-bff
+          image: eviive/repository:projets-bff-1.0.0
+          volumeMounts:
+            - name: logs
+              mountPath: /workspace/logs
+          ports:
+            - name: http
+              containerPort: 8080
+      volumes:
+        - name: logs
+          persistentVolumeClaim:
+            claimName: projects-bff-logs
