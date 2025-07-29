@@ -6,8 +6,8 @@ patches:
   - path: patches/ingr.yaml
     target:
       kind: IngressRoute
-      name: sonarr
+      name: projects
   - path: patches/cert.yaml
     target:
       kind: Certificate
-      name: sonarr
+      name: projects
