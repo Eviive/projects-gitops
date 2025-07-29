@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: projects-bff
-          image: eviive/repository:projets-bff-1.0.0
+          image: eviive/repository:projects-bff-feat-kubernetes
           volumeMounts:
             - name: logs
               mountPath: /workspace/logs

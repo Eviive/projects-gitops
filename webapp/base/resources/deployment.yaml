@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: projects-webapp
-          image: eviive/repository:projets-webapp-2.0.0
+          image: eviive/repository:projects-webapp-feat-kubernetes
           ports:
             - name: http
               containerPort: 80
