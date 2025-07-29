@@ -25,3 +25,5 @@ spec:
         - name: logs
           persistentVolumeClaim:
             claimName: projects-api-logs
+      imagePullSecrets:
+        - name: projects-image-pull-secret
