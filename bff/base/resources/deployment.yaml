@@ -15,12 +15,15 @@ spec:
       containers:
         - name: projects-bff
           image: eviive/repository:projects-bff-feat-kubernetes
-          volumeMounts:
-            - name: logs
-              mountPath: /workspace/logs
           ports:
             - name: http
               containerPort: 8080
+          envFrom:
+            - secretRef:
+                name: projects-bff-env
+          volumeMounts:
+            - name: logs
+              mountPath: /workspace/logs
       volumes:
         - name: logs
           persistentVolumeClaim:

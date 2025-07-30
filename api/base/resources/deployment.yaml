@@ -15,12 +15,15 @@ spec:
       containers:
         - name: projects-api
           image: eviive/repository:projects-api-feat-kubernetes
-          volumeMounts:
-            - name: logs
-              mountPath: /workspace/logs
           ports:
             - name: http
               containerPort: 8080
+          envFrom:
+            - secretRef:
+                name: projects-api-env
+          volumeMounts:
+            - name: logs
+              mountPath: /workspace/logs
       volumes:
         - name: logs
           persistentVolumeClaim:
