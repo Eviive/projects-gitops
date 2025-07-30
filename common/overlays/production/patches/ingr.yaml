@@ -3,7 +3,7 @@
   value: Host(`projects.home.albertv.dev`)
 - op: add
   path: /spec/routes/1/match
-  value: >-
+  value:
     Host(`projects.home.albertv.dev`)
     && (
       PathRegexp(`^/(api|oauth2|logout|v2/api-docs|v3/api-docs|swagger-resources|configuration/ui|configuration/security|webjars|swagger-ui)(.*)?$`)
