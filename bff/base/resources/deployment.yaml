@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: projects-bff
-          image: eviive/repository:projects-bff-feat-kubernetes
+          image: bff
           ports:
             - name: http
               containerPort: 8080

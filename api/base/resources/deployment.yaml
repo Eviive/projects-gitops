@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: projects-api
-          image: eviive/repository:projects-api-feat-kubernetes
+          image: api
           ports:
             - name: http
               containerPort: 8080
