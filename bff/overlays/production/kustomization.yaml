@@ -5,4 +5,4 @@ resources:
 images:
 - name: bff
   newName: eviive/repository
-  newTag: projects-bff-feat-kubernetes
+  newTag: projects-bff-feat-gitops
