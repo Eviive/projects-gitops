@@ -5,4 +5,4 @@ resources:
 images:
 - name: api
   newName: eviive/repository
-  newTag: projects-api-feat-kubernetes
+  newTag: projects-api-2.0.0
