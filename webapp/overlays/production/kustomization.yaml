@@ -5,4 +5,4 @@ resources:
 images:
 - name: webapp
   newName: eviive/repository
-  newTag: projects-webapp-feat-kubernetes
+  newTag: projects-webapp-2.1.0
