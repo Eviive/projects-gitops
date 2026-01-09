@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: projects-api
-          image: api
+          image: eviive/repository:projects-api-2.0.0
           ports:
             - name: http
               containerPort: 8080

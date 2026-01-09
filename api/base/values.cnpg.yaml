@@ -1,0 +1,16 @@
+version:
+  postgresql: "16.11-minimal-trixie"
+
+databases:
+  - name: projects-api
+
+cluster:
+  instances: 1
+  initdb:
+    database: projects-api
+    secret:
+      name: projects-api-cnpg
+  storage:
+    storageClass: nfs-ssd-1
+  annotations:
+    folder: projects-api-cnpg
