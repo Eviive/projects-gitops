@@ -13,4 +13,4 @@ cluster:
   storage:
     storageClass: nfs-ssd-1
   annotations:
-    folder: projects-api-cnpg
+    folder: projects/api/cnpg
