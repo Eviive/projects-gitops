@@ -4,7 +4,7 @@ metadata:
   name: projects
 spec:
   entryPoints:
-    - websecure
+    - web-ext
   routes:
     - kind: Rule
       services:
@@ -20,5 +20,3 @@ spec:
       middlewares:
         - name: traefik-error-pages
           namespace: traefik
-  tls:
-    secretName: projects-tls
