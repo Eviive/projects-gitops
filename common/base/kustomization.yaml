@@ -3,5 +3,4 @@ kind: Kustomization
 namespace: projects
 resources:
   - resources/ns.yaml
-  - resources/ingr.yaml
   - resources/cert.yaml

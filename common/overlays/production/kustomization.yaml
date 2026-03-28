@@ -7,7 +7,3 @@ patches:
     target:
       kind: IngressRoute
       name: projects
-  - path: patches/cert.yaml
-    target:
-      kind: Certificate
-      name: projects
